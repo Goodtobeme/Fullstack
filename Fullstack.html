@@ -3,23 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewpoint" content="width=">
+	<link rel="stylesheet" type="text/css" href="Desktop/app.js">
 	<title>My Turn</title>
 </head>
 <body>
 <h1>Hello World</h1>
-</body>
-<script src="https://codejquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQliLNfOu91"></script>
-<script>
-(document).ready(function (){
-	$("button").on("click", function ( {
-		$.ajax({
-			url: "/api/all",
-			method: "GET"
-     }).done(function (response) {
-     	$(".result").append(response);
+
+<button>Get Data</button>
+	<div class="result"></div>
+	<script src="https://codejquery.com/jquery-3.3.1.min.js" 
+	integrity="sha256-FgpCb/KJQliLNfOu91"></script>
+	<script>
+	$(document).ready(function (){
+		$("button").on("click", function () {
+			$.ajax({
+				url: "/api/all",
+				method: "GET"
+	     }).done(function (response) {
+	     	 $(".result").append(response) 
+
+	     	});
+		});
 	});
-})
+	
 
-</script>/
-
+</script>
+</body>
 </html>
